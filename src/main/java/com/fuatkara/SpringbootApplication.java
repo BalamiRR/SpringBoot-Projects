@@ -1,4 +1,4 @@
-package com.fuatkara.map;
+package com.fuatkara;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
