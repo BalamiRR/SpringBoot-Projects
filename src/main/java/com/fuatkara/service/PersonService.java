@@ -1,6 +1,8 @@
 package com.fuatkara.service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -11,7 +13,8 @@ import com.fuatkara.model.Person;
 
 @Service	 
 public class PersonService {
-
+	//Service class'inda sadece isimize yarayan methodlari burada toparlayip
+	//Controllerda calisitiriyoruz.
 	private final PersonDao personDao;
 
 	//PersonService Constructor, PersonDao yu autowired yapiyoruz.
@@ -28,4 +31,10 @@ public class PersonService {
 	public List<Person> getAllPeople(){
 		return personDao.selectAllPeople();
 	}
+	
+	public Optional<Person> getPersonById(UUID id){
+		return personDao.selectPersonById(id);
+	}
+	
+	
 }
